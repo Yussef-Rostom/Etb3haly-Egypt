@@ -6,41 +6,41 @@
 
 @layer base {
   :root {
-    /* Core Background Colors */
-    --background: 220 30% 8%;
-    --foreground: 210 40% 98%;
-    --surface: 220 25% 12%;
-    --surface-variant: 220 20% 16%;
+    /* Core Background Colors - Light Mode */
+    --background: 220 60% 98%;
+    --foreground: 220 40% 30%;
+    --surface: 220 60% 95%;
+    --surface-variant: 220 60% 92%;
 
     /* Card & Interactive Elements */
-    --card: 220 25% 12%;
-    --card-foreground: 210 40% 98%;
-    --card-hover: 220 20% 16%;
+    --card: 220 60% 95%;
+    --card-foreground: 220 40% 30%;
+    --card-hover: 220 60% 92%;
 
     /* Popover & Dialogs */
-    --popover: 220 25% 12%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 60% 95%;
+    --popover-foreground: 220 40% 30%;
 
-    /* Primary Brand Colors - Tech Blue */
-    --primary: 214 88% 55%;
+    /* Primary Brand Colors */
+    --primary: 210 100% 50%;
     --primary-foreground: 210 40% 98%;
-    --primary-hover: 214 88% 50%;
-    --primary-glow: 214 88% 65%;
+    --primary-hover: 210 100% 45%;
+    --primary-glow: 210 100% 60%;
 
-    /* Secondary Colors - Egyptian Gold */
-    --secondary: 45 100% 65%;
-    --secondary-foreground: 220 30% 8%;
-    --secondary-hover: 45 100% 60%;
-    --secondary-glow: 45 100% 75%;
+    /* Secondary Colors */
+    --secondary: 220 50% 40%;
+    --secondary-foreground: 210 40% 98%;
+    --secondary-hover: 220 50% 35%;
+    --secondary-glow: 220 50% 50%;
 
-    /* Accent Colors - Future Purple */
-    --accent: 270 75% 60%;
+    /* Accent Colors */
+    --accent: 200 100% 50%;
     --accent-foreground: 210 40% 98%;
-    --accent-hover: 270 75% 55%;
+    --accent-hover: 200 100% 45%;
 
     /* Muted Elements */
-    --muted: 220 20% 16%;
-    --muted-foreground: 215 20% 70%;
+    --muted: 220 60% 92%;
+    --muted-foreground: 220 40% 50%;
 
     /* Status Colors */
     --destructive: 0 75% 60%;
@@ -49,97 +49,81 @@
     --warning: 35 100% 60%;
 
     /* Interactive Elements */
-    --border: 220 20% 20%;
-    --input: 220 20% 16%;
-    --ring: 214 88% 55%;
+    --border: 220 60% 88%;
+    --input: 220 60% 92%;
+    --ring: 210 100% 50%;
 
-    /* Design System Values */
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(210 100% 50%), hsl(210 100% 80%));
+    --gradient-secondary: linear-gradient(135deg, hsl(220 50% 40%), hsl(210 100% 50%));
+    --gradient-surface: linear-gradient(135deg, hsl(220 60% 95%), hsl(220 60% 92%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 60% 98%) 0%, hsl(220 60% 95%) 100%);
+
+    /* Other variables... */
     --radius: 0.75rem;
     --radius-lg: 1rem;
     --radius-xl: 1.5rem;
-
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(214 88% 55%), hsl(270 75% 60%));
-    --gradient-secondary: linear-gradient(135deg, hsl(45 100% 65%), hsl(35 100% 60%));
-    --gradient-surface: linear-gradient(135deg, hsl(220 25% 12%), hsl(220 20% 16%));
-    --gradient-hero: linear-gradient(135deg, hsl(220 30% 8%) 0%, hsl(214 88% 15%) 50%, hsl(270 75% 20%) 100%);
-
-    /* Shadows */
-    --shadow-primary: 0 10px 40px -10px hsl(214 88% 55% / 0.3);
-    --shadow-secondary: 0 10px 40px -10px hsl(45 100% 65% / 0.2);
-    --shadow-elevated: 0 20px 60px -10px hsl(220 30% 8% / 0.5);
-    --shadow-glow: 0 0 40px hsl(214 88% 65% / 0.4);
-
-    /* Animations */
+    --shadow-primary: 0 10px 40px -10px hsl(210 100% 50% / 0.3);
+    --shadow-secondary: 0 10px 40px -10px hsl(220 50% 40% / 0.2);
+    --shadow-elevated: 0 20px 60px -10px hsl(220 60% 98% / 0.5);
+    --shadow-glow: 0 0 40px hsl(210 100% 60% / 0.4);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-    /* Typography Scale */
-    --font-size-xs: 0.75rem;
-    --font-size-sm: 0.875rem;
-    --font-size-base: 1rem;
-    --font-size-lg: 1.125rem;
-    --font-size-xl: 1.25rem;
-    --font-size-2xl: 1.5rem;
-    --font-size-3xl: 1.875rem;
-    --font-size-4xl: 2.25rem;
-    --font-size-5xl: 3rem;
-    --font-size-6xl: 3.75rem;
-    --font-size-hero: 4.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    /* Core Background Colors - Dark Mode */
+    --background: 220 40% 10%;
     --foreground: 210 40% 98%;
+    --surface: 220 40% 13%;
+    --surface-variant: 220 40% 16%;
 
-    --card: 222.2 84% 4.9%;
+    /* Card & Interactive Elements */
+    --card: 220 40% 13%;
     --card-foreground: 210 40% 98%;
+    --card-hover: 220 40% 16%;
 
-    --popover: 222.2 84% 4.9%;
+    /* Popover & Dialogs */
+    --popover: 220 40% 13%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    /* Primary Brand Colors */
+    --primary: 200 100% 70%;
+    --primary-foreground: 220 40% 10%;
+    --primary-hover: 200 100% 65%;
+    --primary-glow: 200 100% 80%;
 
-    --secondary: 217.2 32.6% 17.5%;
+    /* Secondary Colors */
+    --secondary: 210 80% 60%;
     --secondary-foreground: 210 40% 98%;
+    --secondary-hover: 210 80% 55%;
+    --secondary-glow: 210 80% 70%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
+    /* Accent Colors */
+    --accent: 190 100% 50%;
     --accent-foreground: 210 40% 98%;
+    --accent-hover: 190 100% 45%;
 
-    --destructive: 0 62.8% 30.6%;
+    /* Muted Elements */
+    --muted: 220 40% 16%;
+    --muted-foreground: 215 30% 70%;
+
+    /* Status Colors */
+    --destructive: 0 75% 60%;
     --destructive-foreground: 210 40% 98%;
+    --success: 150 60% 50%;
+    --warning: 35 100% 60%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Interactive Elements */
+    --border: 220 40% 20%;
+    --input: 220 40% 16%;
+    --ring: 200 100% 70%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(210 40% 98%), hsl(210 100% 70%));
+    --gradient-secondary: linear-gradient(135deg, hsl(210 80% 60%), hsl(200 100% 70%));
+    --gradient-surface: linear-gradient(135deg, hsl(220 40% 13%), hsl(220 40% 16%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 40% 10%) 0%, hsl(220 40% 5%) 100%);
   }
 }
 
@@ -155,7 +139,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold tracking-tight;
+    @apply font-bold tracking-tight hero-text;
   }
 
   .hero-text {

@@ -1,4 +1,5 @@
 import { Box } from 'lucide-react';
+import { ThemeToggle } from '../theme/ThemeToggle';
 
 interface HeaderProps {
   currentSlide: number;
@@ -21,25 +22,28 @@ const Header = ({ currentSlide, totalSlides, goToSlide }: HeaderProps) => {
             </span>
           </div>
           
-          {/* Slide Counter + Indicators */}
+          {/* Slide Counter + Indicators + Theme Toggle */}
           <div className="flex items-center space-x-3 sm:space-x-4">
-            <span className="text-xs sm:text-sm text-muted-foreground">
-              {currentSlide + 1} / {totalSlides}
-            </span>
-            
-            <div className="flex space-x-1 sm:space-x-1.5">
-              {Array.from({ length: totalSlides }).map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToSlide(index)}
-                  className={`rounded-full transition-colors ${
-                    index === currentSlide 
-                      ? 'bg-primary' 
-                      : 'bg-muted'
-                  } w-2 h-2 sm:w-2.5 sm:h-2.5`}
-                />
-              ))}
+            <div className="flex items-center space-x-3 sm:space-x-4">
+              <span className="text-xs sm:text-sm hero-text">
+                {currentSlide + 1} / {totalSlides}
+              </span>
+              
+              <div className="flex space-x-1 sm:space-x-1.5">
+                {Array.from({ length: totalSlides }).map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => goToSlide(index)}
+                    className={`rounded-full transition-colors ${
+                      index === currentSlide 
+                        ? 'bg-primary' 
+                        : 'bg-muted'
+                    } w-2 h-2 sm:w-2.5 sm:h-2.5`}
+                  />
+                ))}
+              </div>
             </div>
+            <ThemeToggle />
           </div>
         </div>
       </div>

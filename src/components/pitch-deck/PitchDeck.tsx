@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from './Header';
 import SlideNavigation from './SlideNavigation';
 import { Slide } from './types';
@@ -92,6 +92,19 @@ const PitchDeck = () => {
     setCurrentSlide(index);
   };
 
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowRight') {
+        setCurrentSlide((prev) => (prev + 1) % slides.length);
+      } else if (e.key === 'ArrowLeft') {
+        setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [slides.length]);
+
   return (
     <div className="h-screen flex flex-col bg-gradient-to-br from-background via-surface to-surface-variant">
       {/* Header takes fixed height */}
@@ -112,15 +125,13 @@ const PitchDeck = () => {
       </main>
 
       {/* Navigation */}
-      <div className="fixed bottom-2 sm:bottom-4 left-1/2 transform -translate-x-1/2 z-30 w-[95%] sm:w-3/4 px-2">
-        <SlideNavigation
-          currentSlide={currentSlide}
-          totalSlides={slides.length}
-          slideTitle={slides[currentSlide].title}
-          onNext={nextSlide}
-          onPrev={prevSlide}
-        />
-      </div>
+      <SlideNavigation
+        currentSlide={currentSlide}
+        totalSlides={slides.length}
+        slideTitle={slides[currentSlide].title}
+        onNext={nextSlide}
+        onPrev={prevSlide}
+      />
     </div>
   );
 };

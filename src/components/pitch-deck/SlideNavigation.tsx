@@ -20,11 +20,11 @@ const SlideNavigation = ({
     <div className="fixed bottom-3 left-1/2 -translate-x-1/2 z-50 w-full flex justify-center px-3">
       <div
         className="
-          flex flex-row items-center justify-center
+          flex flex-row items-center justify-between
           gap-2 sm:gap-4
           surface-card px-3 py-2 sm:px-5 sm:py-3
           rounded-full shadow-md
-          max-w-xs sm:max-w-md w-full sm:w-auto
+          w-[350px] sm:w-[350px]
         "
       >
         {/* Previous Button */}
